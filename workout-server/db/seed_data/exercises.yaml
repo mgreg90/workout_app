@@ -1,0 +1,41 @@
+---
+exercises:
+- name: Push Up
+  code: PUSU
+  category: PUSH
+- name: Low Bar Push Up
+  code: LBPU
+  category: PUSH
+- name: Pull Up
+  code: PLLU
+  category: PULL
+- name: DB Curl
+  code: DCRL
+  category: PULL
+- name: DB Hammer Curl
+  code: DHCL
+  category: PULL
+- name: DB Shoulder Press
+  code: DSHP
+  category: PUSH
+- name: Russian Twists
+  code: RTWT
+  category: CORE
+- name: Planks
+  code: PLNK
+  category: CORE
+- name: DB Row
+  code: DROW
+  category: PULL
+- name: Inverted DB Row
+  code: IDRW
+  category: PULL
+- name: Lying Glute Activators
+  code: LGAC
+  category: STRETCH
+- name: Calf Stretch
+  code: CLFS
+  category: STRETCH
+- name: Glute Stretch
+  code: GLTS
+  category: STRETCH

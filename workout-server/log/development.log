@@ -1,0 +1,1111 @@
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/mikegregory/.rvm/gems/ruby-2.6.4/bin/rake:23)
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/mikegregory/.rvm/gems/ruby-2.6.4/bin/rake:23)
+  [1m[35m (844.9ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (398.7ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (37.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (42.5ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExercises (20191103050519)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (47.4ms)[0m  [1m[35mCREATE TABLE "exercises" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103050519"]]
+  [1m[35m (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (21.0ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 05:15:32.173050"], ["updated_at", "2019-11-03 05:15:32.173050"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (25.0ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mprimary::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.2ms)[0m  [1m[35mDROP TABLE "exercise_definitions"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.8ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191103051913"]]
+  [1m[35m (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("id" bigserial primary key, "name" character varying, "code" character varying(3), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE  INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.6ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (163.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_development"[0m
+  [1m[35m (192.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_test"[0m
+  [1m[35m (341.8ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (406.8ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.2ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("id" bigserial primary key, "name" character varying, "code" character varying(3), "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE  INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 05:31:20.948010"], ["updated_at", "2019-11-03 05:31:20.948010"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (1.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.3ms)[0m  [1m[35mBEGIN[0m
+  ↳ (pry):1:in `add_exercise_def'
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  ↳ (pry):1:in `add_exercise_def'
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (1.7ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["name", "Push Up"], ["code", "PUSU"], ["created_at", "2019-11-03 05:59:25.835567"], ["updated_at", "2019-11-03 05:59:25.835567"]]
+  [1m[35m (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (17.8ms)[0m  [1m[35mDROP TABLE "exercise_definitions"[0m
+  [1m[36mprimary::SchemaMigration Destroy (0.6ms)[0m  [1m[31mDELETE FROM "schema_migrations" WHERE "schema_migrations"."version" = $1[0m  [["version", "20191103051913"]]
+  [1m[35m (3.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (43.1ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("name" character varying, "code" character varying(4) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.6ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Push Up"], ["code", "PUSU"], ["created_at", "2019-11-03 06:03:09.780990"], ["updated_at", "2019-11-03 06:03:09.780990"]]
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LBPU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.8ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Low Bar Push Up"], ["code", "LBPU"], ["created_at", "2019-11-03 06:03:11.952950"], ["updated_at", "2019-11-03 06:03:11.952950"]]
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLLU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.8ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Pull Up"], ["code", "PLLU"], ["created_at", "2019-11-03 06:03:13.937458"], ["updated_at", "2019-11-03 06:03:13.937458"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (1.0ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Push Up"], ["code", "PUSU"], ["created_at", "2019-11-03 06:04:10.910803"], ["updated_at", "2019-11-03 06:04:10.910803"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LBPU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Low Bar Push Up"], ["code", "LBPU"], ["created_at", "2019-11-03 06:04:10.915358"], ["updated_at", "2019-11-03 06:04:10.915358"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLLU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Pull Up"], ["code", "PLLU"], ["created_at", "2019-11-03 06:04:10.919151"], ["updated_at", "2019-11-03 06:04:10.919151"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DCRL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.7ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "DB Curl"], ["code", "DCRL"], ["created_at", "2019-11-03 06:04:10.923660"], ["updated_at", "2019-11-03 06:04:10.923660"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DHCL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "DB Hammer Curl"], ["code", "DHCL"], ["created_at", "2019-11-03 06:04:10.929609"], ["updated_at", "2019-11-03 06:04:10.929609"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DSHP"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "DB Shoulder Press"], ["code", "DSHP"], ["created_at", "2019-11-03 06:04:10.934545"], ["updated_at", "2019-11-03 06:04:10.934545"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "RTWT"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Russian Twists"], ["code", "RTWT"], ["created_at", "2019-11-03 06:04:10.937803"], ["updated_at", "2019-11-03 06:04:10.937803"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLNK"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Planks"], ["code", "PLNK"], ["created_at", "2019-11-03 06:04:10.941157"], ["updated_at", "2019-11-03 06:04:10.941157"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DROW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "DB Row"], ["code", "DROW"], ["created_at", "2019-11-03 06:04:10.945204"], ["updated_at", "2019-11-03 06:04:10.945204"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "IDRW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Inverted DB Row"], ["code", "IDRW"], ["created_at", "2019-11-03 06:04:10.949052"], ["updated_at", "2019-11-03 06:04:10.949052"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LGAC"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Lying Glute Activators"], ["code", "LGAC"], ["created_at", "2019-11-03 06:04:10.961041"], ["updated_at", "2019-11-03 06:04:10.961041"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "CLFS"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Calf Stretch"], ["code", "CLFS"], ["created_at", "2019-11-03 06:04:10.963118"], ["updated_at", "2019-11-03 06:04:10.963118"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "GLTS"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "created_at", "updated_at") VALUES ($1, $2, $3, $4)[0m  [["name", "Glute Stretch"], ["code", "GLTS"], ["created_at", "2019-11-03 06:04:10.964759"], ["updated_at", "2019-11-03 06:04:10.964759"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" LIMIT $1[0m  [["LIMIT", 11]]
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+Started GET "/" for ::1 at 2019-11-03 01:10:41 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /Users/mikegregory/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /Users/mikegregory/.rvm/gems/ruby-2.6.4/gems/railties-6.0.0/lib/rails/templates/rails/welcome/index.html.erb (Duration: 10.0ms | Allocations: 475)
+Completed 200 OK in 37ms (Views: 24.8ms | ActiveRecord: 0.0ms | Allocations: 2668)
+
+
+Started GET "/favicon.ico" for ::1 at 2019-11-03 01:10:42 -0500
+  
+ActionController::RoutingError (No route matches [GET] "/favicon.ico"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started OPTIONS "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 14:52:55 -0500
+  [1m[35m (1.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/exercise_definitions/search"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started OPTIONS "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 14:54:13 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/exercise_definitions/search"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started OPTIONS "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 14:58:31 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/exercise_definitions/search"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started OPTIONS "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 14:58:37 -0500
+  
+ActionController::RoutingError (No route matches [OPTIONS] "/api/v1/exercise_definitions/search"):
+  
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:36:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:08:31 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (uninitialized constant Api::V1::ExerciseDefinitions::SearchesController
+Did you mean?  Api::V1::ExerciseDefinitions::SearchController):
+  
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:284:in `const_get'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:284:in `block in constantize'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `each'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `inject'
+activesupport (6.0.0) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (6.0.0) lib/active_support/dependencies/zeitwerk_integration.rb:19:in `constantize'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:88:in `controller_class_for'
+actionpack (6.0.0) lib/action_dispatch/http/request.rb:81:in `controller_class'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:45:in `controller'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:31:in `serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:49:in `block in serve'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (6.0.0) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (6.0.0) lib/action_dispatch/routing/route_set.rb:837:in `call'
+rack (2.0.7) lib/rack/etag.rb:25:in `call'
+rack (2.0.7) lib/rack/conditional_get.rb:38:in `call'
+rack (2.0.7) lib/rack/head.rb:12:in `call'
+activerecord (6.0.0) lib/active_record/migration.rb:567:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (6.0.0) lib/active_support/callbacks.rb:101:in `run_callbacks'
+actionpack (6.0.0) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/debug_exceptions.rb:32:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (6.0.0) lib/rails/rack/logger.rb:38:in `call_app'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `block in tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (6.0.0) lib/active_support/tagged_logging.rb:80:in `tagged'
+railties (6.0.0) lib/rails/rack/logger.rb:26:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.0.7) lib/rack/runtime.rb:22:in `call'
+activesupport (6.0.0) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/static.rb:126:in `call'
+rack (2.0.7) lib/rack/sendfile.rb:111:in `call'
+actionpack (6.0.0) lib/action_dispatch/middleware/host_authorization.rb:83:in `call'
+rack-cors (1.0.3) lib/rack/cors.rb:95:in `call'
+railties (6.0.0) lib/rails/engine.rb:526:in `call'
+puma (3.12.1) lib/puma/configuration.rb:227:in `call'
+puma (3.12.1) lib/puma/server.rb:660:in `handle_request'
+puma (3.12.1) lib/puma/server.rb:474:in `process_client'
+puma (3.12.1) lib/puma/server.rb:334:in `block in run'
+puma (3.12.1) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+DEPRECATION WARNING: Using `bin/rake routes` is deprecated and will be removed in Rails 6.1. Use `bin/rails routes` instead.
+ (called from load at /Users/mikegregory/.rvm/gems/ruby-2.6.4/bin/rake:23)
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:10:07 -0500
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"searchText"=>"push", "search"=>{"searchText"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" ORDER BY "exercise_definitions"."code" DESC LIMIT $1[0m  [["LIMIT", 1]]
+  ↳ (pry):1:in `create'
+Completed 204 No Content in 412877ms (ActiveRecord: 4.4ms | Allocations: 51551)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:17:41 -0500
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"searchText"=>"push", "search"=>{"searchText"=>"push"}}
+  [1m[36mExerciseDefinition Load (90.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 111ms (Views: 16.4ms | ActiveRecord: 92.4ms | Allocations: 5977)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:18:29 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"searchText"=>"push", "search"=>{"searchText"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 20545ms (Views: 6.2ms | ActiveRecord: 2.7ms | Allocations: 40834)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:19:04 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"searchText"=>"push", "search"=>{"searchText"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:6:in `create'
+Completed 200 OK in 557226ms (Views: 5.6ms | ActiveRecord: 3.1ms | Allocations: 38603)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:28:42 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (1.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:6:in `create'
+Completed 200 OK in 22048ms (Views: 6.0ms | ActiveRecord: 4.2ms | Allocations: 40876)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:29:50 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 8ms (Views: 3.8ms | ActiveRecord: 2.2ms | Allocations: 4352)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:31:39 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (1.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 1.9ms | Allocations: 1202)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:35:07 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (2.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 2.4ms | Allocations: 1200)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:36:01 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (2.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 2.0ms | Allocations: 1182)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:54:24 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1243)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:13 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"stre", "search"=>{"search_text"=>"stre"}}
+  [1m[36mExerciseDefinition Load (1.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%stre%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 2.5ms | ActiveRecord: 1.5ms | Allocations: 1182)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:21 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (1.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 18ms (Views: 15.9ms | ActiveRecord: 1.2ms | Allocations: 1187)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:24 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"pull", "search"=>{"search_text"=>"pull"}}
+  [1m[36mExerciseDefinition Load (1.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%pull%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 3.6ms | ActiveRecord: 1.2ms | Allocations: 1096)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:26 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:28 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"ben", "search"=>{"search_text"=>"ben"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%ben%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.6ms | Allocations: 972)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:30 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"db", "search"=>{"search_text"=>"db"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%db%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.4ms | Allocations: 1503)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:34 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"glut", "search"=>{"search_text"=>"glut"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%glut%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 3.0ms | ActiveRecord: 0.7ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:39 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 0.6ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:41 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"pull", "search"=>{"search_text"=>"pull"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%pull%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.4ms | Allocations: 1078)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:44 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"", "search"=>{"search_text"=>""}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.6ms | ActiveRecord: 0.5ms | Allocations: 2352)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:45 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:48 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"c", "search"=>{"search_text"=>"c"}}
+  [1m[36mExerciseDefinition Load (0.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%c%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 3.2ms | ActiveRecord: 0.9ms | Allocations: 1503)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:50 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"e", "search"=>{"search_text"=>"e"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%e%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:52 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"fl", "search"=>{"search_text"=>"fl"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%fl%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 2ms (Views: 1.3ms | ActiveRecord: 0.4ms | Allocations: 972)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 15:55:53 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"gl", "search"=>{"search_text"=>"gl"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%gl%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.9ms | ActiveRecord: 0.5ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:06:19 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"p", "search"=>{"search_text"=>"p"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%p%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.5ms | ActiveRecord: 0.8ms | Allocations: 1564)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:14:21 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (1.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.3ms | ActiveRecord: 1.0ms | Allocations: 1244)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:15:04 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.2ms | ActiveRecord: 0.8ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:16:30 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (1.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 1.6ms | ActiveRecord: 1.5ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:16:38 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"gl", "search"=>{"search_text"=>"gl"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%gl%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.2ms | ActiveRecord: 0.5ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:16:47 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (1.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 3.7ms | ActiveRecord: 1.0ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:17:00 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"push", "search"=>{"search_text"=>"push"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%push%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 3.2ms | ActiveRecord: 0.7ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:17:05 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"pull", "search"=>{"search_text"=>"pull"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%pull%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.5ms | Allocations: 1078)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:17:22 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"glut", "search"=>{"search_text"=>"glut"}}
+  [1m[36mExerciseDefinition Load (1.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%glut%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 7ms (Views: 4.6ms | ActiveRecord: 1.3ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:17:58 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 2ms (Views: 1.4ms | ActiveRecord: 0.4ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:19:40 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 15ms (Views: 12.8ms | ActiveRecord: 0.9ms | Allocations: 1620)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:19:50 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 3.7ms | ActiveRecord: 0.6ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:19:55 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.7ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:20:52 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (3.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 8ms (Views: 3.0ms | ActiveRecord: 3.0ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:24:07 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (1.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 2.7ms | ActiveRecord: 1.8ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:25:28 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 3.1ms | ActiveRecord: 0.5ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:26:36 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"pus", "search"=>{"search_text"=>"pus"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%pus%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.1ms | ActiveRecord: 0.6ms | Allocations: 1184)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:28:05 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.7ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:28:29 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.9ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:32:04 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"s", "search"=>{"search_text"=>"s"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%s%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.5ms | ActiveRecord: 0.5ms | Allocations: 1821)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:32:51 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.6ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:33:12 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 4.0ms | ActiveRecord: 0.6ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:33:38 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 4.7ms | ActiveRecord: 0.5ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:33:58 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.7ms | ActiveRecord: 0.7ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:34:12 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 4.3ms | ActiveRecord: 0.4ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:35:15 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (2.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 2.6ms | ActiveRecord: 2.4ms | Allocations: 1609)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:35:27 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (5.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 8ms (Views: 2.6ms | ActiveRecord: 5.3ms | Allocations: 1609)
+
+
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (40.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (204.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_development"[0m
+  [1m[35m (212.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_test"[0m
+  [1m[35m (882.3ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (356.3ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (2.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (206.3ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("name" character varying, "code" character varying(4) NOT NULL, "type" character varying(6) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 21:39:12.271879"], ["updated_at", "2019-11-03 21:39:12.271879"]]
+  [1m[35m (0.7ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (193.9ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_development"[0m
+  [1m[35m (199.0ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_test"[0m
+  [1m[35m (328.9ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (368.8ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (27.4ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.5ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.3ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("name" character varying, "code" character varying(4) NOT NULL, "category" character varying(6) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 21:40:23.920679"], ["updated_at", "2019-11-03 21:40:23.920679"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (225.1ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_development"[0m
+  [1m[35m (200.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_test"[0m
+  [1m[35m (406.9ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (407.2ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.6ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (1.9ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("name" character varying, "code" character varying(4) NOT NULL, "category" character varying(6) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.4ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.4ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.5ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 21:40:51.664275"], ["updated_at", "2019-11-03 21:40:51.664275"]]
+  [1m[35m (0.3ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.7ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Push Up"], ["code", "PUSU"], ["category", "PUSH"], ["created_at", "2019-11-03 21:40:51.773071"], ["updated_at", "2019-11-03 21:40:51.773071"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LBPU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Low Bar Push Up"], ["code", "LBPU"], ["category", "PUSH"], ["created_at", "2019-11-03 21:40:51.776090"], ["updated_at", "2019-11-03 21:40:51.776090"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLLU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Pull Up"], ["code", "PLLU"], ["category", "PULL"], ["created_at", "2019-11-03 21:40:51.778575"], ["updated_at", "2019-11-03 21:40:51.778575"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DCRL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Curl"], ["code", "DCRL"], ["category", "PULL"], ["created_at", "2019-11-03 21:40:51.781024"], ["updated_at", "2019-11-03 21:40:51.781024"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DHCL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Hammer Curl"], ["code", "DHCL"], ["category", "PULL"], ["created_at", "2019-11-03 21:40:51.783382"], ["updated_at", "2019-11-03 21:40:51.783382"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DSHP"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Shoulder Press"], ["code", "DSHP"], ["category", "PUSH"], ["created_at", "2019-11-03 21:40:51.785727"], ["updated_at", "2019-11-03 21:40:51.785727"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "RTWT"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Russian Twists"], ["code", "RTWT"], ["category", "CORE"], ["created_at", "2019-11-03 21:40:51.787973"], ["updated_at", "2019-11-03 21:40:51.787973"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLNK"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Planks"], ["code", "PLNK"], ["category", "CORE"], ["created_at", "2019-11-03 21:40:51.790246"], ["updated_at", "2019-11-03 21:40:51.790246"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DROW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Row"], ["code", "DROW"], ["category", "PULL"], ["created_at", "2019-11-03 21:40:51.792520"], ["updated_at", "2019-11-03 21:40:51.792520"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "IDRW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Inverted DB Row"], ["code", "IDRW"], ["category", "PULL"], ["created_at", "2019-11-03 21:40:51.794800"], ["updated_at", "2019-11-03 21:40:51.794800"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LGAC"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (1.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Lying Glute Activators"], ["code", "LGAC"], ["category", "STRETCH"], ["created_at", "2019-11-03 21:40:51.797116"], ["updated_at", "2019-11-03 21:40:51.797116"]]
+  [1m[35m (0.1ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1[0m  [["key", "environment"]]
+  [1m[35m (201.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_development"[0m
+  [1m[35m (196.6ms)[0m  [1m[35mDROP DATABASE IF EXISTS "workout_server_test"[0m
+  [1m[35m (387.3ms)[0m  [1m[35mCREATE DATABASE "workout_server_development" ENCODING = 'unicode'[0m
+  [1m[35m (399.5ms)[0m  [1m[35mCREATE DATABASE "workout_server_test" ENCODING = 'unicode'[0m
+  [1m[35m (5.5ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (4.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1961791070391664995)[0m
+  [1m[35m (0.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateExerciseDefinitions (20191103051913)
+  [1m[35m (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (42.1ms)[0m  [1m[35mCREATE TABLE "exercise_definitions" ("name" character varying, "code" character varying(4) NOT NULL, "category" character varying(8) NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE UNIQUE INDEX  "index_exercise_definitions_on_code" ON "exercise_definitions"  ("code")[0m
+  [1m[36mprimary::SchemaMigration Create (0.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20191103051913"]]
+  [1m[35m (0.6ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2019-11-03 21:41:16.779931"], ["updated_at", "2019-11-03 21:41:16.779931"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1961791070391664995)[0m
+  [1m[35m (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+  [1m[35m (0.1ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PUSU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.5ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Push Up"], ["code", "PUSU"], ["category", "PUSH"], ["created_at", "2019-11-03 21:41:16.877766"], ["updated_at", "2019-11-03 21:41:16.877766"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LBPU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Low Bar Push Up"], ["code", "LBPU"], ["category", "PUSH"], ["created_at", "2019-11-03 21:41:16.880289"], ["updated_at", "2019-11-03 21:41:16.880289"]]
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLLU"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.6ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Pull Up"], ["code", "PLLU"], ["category", "PULL"], ["created_at", "2019-11-03 21:41:16.882992"], ["updated_at", "2019-11-03 21:41:16.882992"]]
+  [1m[36mExerciseDefinition Load (0.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DCRL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.6ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Curl"], ["code", "DCRL"], ["category", "PULL"], ["created_at", "2019-11-03 21:41:16.886095"], ["updated_at", "2019-11-03 21:41:16.886095"]]
+  [1m[36mExerciseDefinition Load (0.3ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DHCL"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Hammer Curl"], ["code", "DHCL"], ["category", "PULL"], ["created_at", "2019-11-03 21:41:16.888547"], ["updated_at", "2019-11-03 21:41:16.888547"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DSHP"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Shoulder Press"], ["code", "DSHP"], ["category", "PUSH"], ["created_at", "2019-11-03 21:41:16.890282"], ["updated_at", "2019-11-03 21:41:16.890282"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "RTWT"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Russian Twists"], ["code", "RTWT"], ["category", "CORE"], ["created_at", "2019-11-03 21:41:16.891885"], ["updated_at", "2019-11-03 21:41:16.891885"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "PLNK"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.2ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Planks"], ["code", "PLNK"], ["category", "CORE"], ["created_at", "2019-11-03 21:41:16.893576"], ["updated_at", "2019-11-03 21:41:16.893576"]]
+  [1m[36mExerciseDefinition Load (0.2ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "DROW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.6ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "DB Row"], ["code", "DROW"], ["category", "PULL"], ["created_at", "2019-11-03 21:41:16.895406"], ["updated_at", "2019-11-03 21:41:16.895406"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "IDRW"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Inverted DB Row"], ["code", "IDRW"], ["category", "PULL"], ["created_at", "2019-11-03 21:41:16.897613"], ["updated_at", "2019-11-03 21:41:16.897613"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "LGAC"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Lying Glute Activators"], ["code", "LGAC"], ["category", "STRETCH"], ["created_at", "2019-11-03 21:41:16.899723"], ["updated_at", "2019-11-03 21:41:16.899723"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "CLFS"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.4ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Calf Stretch"], ["code", "CLFS"], ["category", "STRETCH"], ["created_at", "2019-11-03 21:41:16.901515"], ["updated_at", "2019-11-03 21:41:16.901515"]]
+  [1m[36mExerciseDefinition Load (0.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE "exercise_definitions"."code" = $1 LIMIT $2[0m  [["code", "GLTS"], ["LIMIT", 1]]
+  [1m[36mExerciseDefinition Create (0.3ms)[0m  [1m[32mINSERT INTO "exercise_definitions" ("name", "code", "category", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "code"[0m  [["name", "Glute Stretch"], ["code", "GLTS"], ["category", "STRETCH"], ["created_at", "2019-11-03 21:41:16.903673"], ["updated_at", "2019-11-03 21:41:16.903673"]]
+  [1m[35m (0.5ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "exercise_definitions"[0m
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:42:15 -0500
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"ca", "search"=>{"search_text"=>"ca"}}
+  [1m[36mExerciseDefinition Load (1.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%ca%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 3.8ms | Allocations: 5360)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:42:23 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"h", "search"=>{"search_text"=>"h"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%h%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.3ms | ActiveRecord: 0.6ms | Allocations: 1721)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:45:49 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 2.3ms | ActiveRecord: 0.8ms | Allocations: 1719)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:45:56 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (4.0ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 7ms (Views: 2.3ms | ActiveRecord: 4.0ms | Allocations: 1719)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:46:22 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 4ms (Views: 3.3ms | ActiveRecord: 0.7ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:48:46 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 3.9ms | ActiveRecord: 0.6ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:48:50 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 3.8ms | ActiveRecord: 0.9ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:52:41 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 6ms (Views: 4.1ms | ActiveRecord: 0.8ms | Allocations: 1719)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 16:59:44 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.8ms | ActiveRecord: 0.8ms | Allocations: 1776)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 17:14:33 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.7ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 1.7ms | ActiveRecord: 0.7ms | Allocations: 1777)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 17:15:05 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (5.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 8ms (Views: 2.5ms | ActiveRecord: 5.1ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 17:15:27 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (3.4ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 7ms (Views: 2.0ms | ActiveRecord: 3.4ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:00:18 -0500
+  [1m[35m (1.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (1.1ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 11ms (Views: 6.2ms | ActiveRecord: 3.1ms | Allocations: 5966)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:00:43 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 3.6ms | ActiveRecord: 0.5ms | Allocations: 1721)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:34:52 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.9ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.9ms | Allocations: 1790)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:36:50 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.6ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 5ms (Views: 3.8ms | ActiveRecord: 0.6ms | Allocations: 1719)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:40:47 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.5ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.1ms | ActiveRecord: 0.5ms | Allocations: 1701)
+
+
+Started POST "/api/v1/exercise_definitions/search" for ::1 at 2019-11-03 19:40:51 -0500
+Processing by Api::V1::ExerciseDefinitions::SearchesController#create as HTML
+  Parameters: {"search_text"=>"a", "search"=>{"search_text"=>"a"}}
+  [1m[36mExerciseDefinition Load (0.8ms)[0m  [1m[34mSELECT "exercise_definitions".* FROM "exercise_definitions" WHERE (name ilike '%a%') LIMIT $1 OFFSET $2[0m  [["LIMIT", 20], ["OFFSET", 0]]
+  ↳ app/controllers/api/v1/exercise_definitions/searches_controller.rb:5:in `create'
+Completed 200 OK in 3ms (Views: 2.0ms | ActiveRecord: 0.8ms | Allocations: 1701)
+
+
